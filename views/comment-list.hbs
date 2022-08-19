@@ -1,0 +1,23 @@
+{{#if comments}}
+  <div class='row'>
+    {{#each comments}}
+      <div class='col-lg-6'>
+        <div class='comment'>
+          <div class='comment-body'>
+            <h6 class='comment-subtitle mb-2 text-muted'>
+              Автор:
+              {{this.author}}
+            </h6>
+            <h6 class='comment-subtitle mb-2 text-muted'>
+              Дата создания:
+              {{this.date}}
+            </h6>
+            <p class='card-text'>{{this.text}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <h1>Список комментариев пуст!</h1>
+{{/if}}
